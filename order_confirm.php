@@ -8,11 +8,6 @@ try {
 	$totalAmount = isset($_POST['totalAmount']) ? $_POST['totalAmount'] : "";
 	$firstName = isset($_POST['firstName']) ? $_POST['firstName'] : "";
 	$lastName = isset($_POST['lastName']) ? $_POST['lastName'] : "";
-	$country = isset($_POST['country']) ? $_POST['country'] : "";
-	$address1 = isset($_POST['address1']) ? $_POST['address1'] : "";
-	$locality = isset($_POST['locality']) ? $_POST['locality'] : "";
-	$administrativeArea = isset($_POST['administrativeArea']) ? $_POST['administrativeArea'] : "";
-	$postalCode = isset($_POST['postalCode']) ? $_POST['postalCode'] : "";
 	$currency = isset($_POST['currency']) ? $_POST['currency'] : "";
 	$email = isset($_POST['email']) ? $_POST['email'] : "";
 	$phoneNumber = isset($_POST['phoneNumber']) ? $_POST['phoneNumber'] : "";
@@ -97,8 +92,8 @@ try {
 </head>
 
 <!-- 서버 환경별 페이플 해외카드 결제 스크립트 -->
-<script src="https://demo-gpay.payple.kr/common/js/gpay-1.0.0.js"></script>
-<!--<script src="https://gpay.payple.kr/common/js/gpay-1.0.0.js"></script> -->
+<script src="https://demo-gpay.payple.kr/common/js/gpay-1.0.1.js"></script>
+<!--<script src="https://gpay.payple.kr/common/js/gpay-1.0.1.js"></script> -->
 <script>
 	$(document).ready(function() {
 		const orderConfirmFormSubmit = function gpayOrderConfirmFormSubmit() {
@@ -121,11 +116,6 @@ try {
 			obj.currency = "<?= $currency ?>"; 											// [필수] 통화
 			obj.firstName = "<?= $firstName ?>"; 										// [선택] 카드소유주 이름
 			obj.lastName = "<?= $lastName ?>"; 											// [선택] 카드소유주 성
-			obj.country = "<?= $country ?>"; 												// [선택] 국가
-			obj.administrativeArea = "<?= $administrativeArea ?>"; 	// [선택] 국가가 미국(US), 혹은 캐나다(CA)인 경우에만 필요한 값으로, 이외 국가의 경우에는 필요하지 않은 값입니다.
-			obj.locality = "<?= $locality ?>"; 											// [선택] 시/구/군
-			obj.address1 = "<?= $address1 ?>"; 											// [선택] 도로명
-			obj.postalCode = "<?= $postalCode ?>"; 									// [선택] 우편번호
 			obj.email = "<?= $email ?>"; 														// [선택] 이메일 주소
 			obj.phoneNumber = "<?= $phoneNumber ?>"; 								// [선택] 휴대전화 번호
 			/**

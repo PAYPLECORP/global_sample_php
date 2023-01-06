@@ -16,11 +16,6 @@ $totalAmount = (isset($_POST['totalAmount'])) ? $_POST['totalAmount'] : "";
 $currency = (isset($_POST['currency'])) ? $_POST['currency'] : "";
 $firstName = (isset($_POST['firstName'])) ? $_POST['firstName'] : "";
 $lastName = (isset($_POST['lastName'])) ? $_POST['lastName'] : "";
-$address1 = (isset($_POST['address1'])) ? $_POST['address1'] : "";
-$locality = (isset($_POST['locality'])) ? $_POST['locality'] : "";
-$administrativeArea = (isset($_POST['administrativeArea'])) ? $_POST['administrativeArea'] : "";
-$postalCode = (isset($_POST['postalCode'])) ? $_POST['postalCode'] : "";
-$country = (isset($_POST['country'])) ? $_POST['country'] : "";
 $email = (isset($_POST['email'])) ? $_POST['email'] : "";
 $phoneNumber = (isset($_POST['phoneNumber'])) ? $_POST['phoneNumber'] : "";
 $billing_key = (isset($_POST['billing_key'])) ? $_POST['billing_key'] : "";
@@ -201,26 +196,6 @@ $submitTimeUtc = (isset($_POST['submitTimeUtc'])) ? $_POST['submitTimeUtc'] : ""
 						<tr>
 							<td>lastName</td>
 							<td><?= $lastName ?></td>
-						</tr>
-						<tr>
-							<td>address1</td>
-							<td><?= $address1 ?></td>
-						</tr>
-						<tr>
-							<td>locality</td>
-							<td><?= $locality ?></td>
-						</tr>
-						<tr>
-							<td>administrativeArea</td>
-							<td><?= $administrativeArea ?></td>
-						</tr>
-						<tr>
-							<td>postalCode</td>
-							<td><?= $postalCode ?></td>
-						</tr>
-						<tr>
-							<td>country</td>
-							<td><?= $country ?></td>
 						</tr>
 						<tr>
 							<td>email</td>

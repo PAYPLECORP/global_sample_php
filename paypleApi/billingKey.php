@@ -50,12 +50,7 @@ try {
   $currency = (isset($_POST['currency'])) ? $_POST['currency'] : ""; 
   $firstName = (isset($_POST['firstName'])) ? $_POST['firstName'] : ""; 
   $lastName = (isset($_POST['lastName'])) ? $_POST['lastName'] : ""; 
-  $country = (isset($_POST['country'])) ? $_POST['country'] : ""; 
-  $administrativeArea = (isset($_POST['administrativeArea'])) ? $_POST['administrativeArea'] : ""; 
-  $locality = (isset($_POST['locality'])) ? $_POST['locality'] : ""; 
-  $address1 = (isset($_POST['address1'])) ? $_POST['address1'] : ""; 
-  $postalCode = (isset($_POST['postalCode'])) ? $_POST['postalCode'] : ""; 
-  $email = (isset($_POST['email'])) ? $_POST['email'] : ""; 
+  $email = (isset($_POST['email'])) ? $_POST['email'] : "";
   $phoneNumber = (isset($_POST['phoneNumber'])) ? $_POST['phoneNumber'] : ""; 
   $resultUrl = (isset($_POST['resultUrl'])) ? $_POST['resultUrl'] : ""; 
 
@@ -76,11 +71,6 @@ try {
 		"currency" => $currency,                          // [필수] 통화
 		"firstName" => $firstName,                        // [선택] 카드소유주 이름 (보내지 않을 경우, 최초 결제시 입력한 카드소유주 이름으로 결제요청이 됩니다.)
 		"lastName" => $lastName,                          // [선택] 카드소유주 성 (보내지 않을 경우, 최초 결제시 입력한 카드소유주 성으로 결제요청이 됩니다.)
-		"country" => $country,                            // [선택] 국가 (보내지 않을 경우, 최초 결제시 입력한 국가로 결제요청이 됩니다.)
-		"administrativeArea" => $administrativeArea,      // [선택] 도/시 (보내지 않을 경우, 최초 결제시 입력한 도/시로 결제요청이 됩니다.)
-		"locality" => $locality,                          // [선택] 시/구/군 (보내지 않을 경우, 최초 결제시 입력한 시/구/군으로 결제요청이 됩니다.)
-		"address1" => $address1,                          // [선택] 도로명  (보내지 않을 경우, 최초 결제시 입력한 도로명으로 결제요청이 됩니다.)
-		"postalCode" => $postalCode,                      // [선택] 우편번호  (보내지 않을 경우, 최초 결제시 입력한 우편번호로 결제요청이 됩니다.)
 		"email" => $email,                                // [선택] 이메일 주소  (보내지 않을 경우, 최초 결제시 입력한 이메일 주소로 결제요청이 됩니다.)
 		"phoneNumber" => $phoneNumber,                    // [선택] 휴대전화 번호  (보내지 않을 경우, 최초 결제시 입력한 휴대전화 번호로 결제요청이 됩니다.)
 		"resultUrl" => $resultUrl                         // [선택] 해당 파라미터(resultUrl)는 별도의 기능은 하지 않으나, 파트너사에서 빌링키 결제 성공시 리다이렉트 하는 등 활용할 수 있는 파라미터입니다.
@@ -121,11 +111,6 @@ try {
       "currency" => $bilingResult->info->currency,
       "firstName" => $bilingResult->info->firstName,
       "lastName" => $bilingResult->info->lastName,
-      "address1" => $bilingResult->info->address1,
-      "locality" => $bilingResult->info->locality,
-      "administrativeArea" => $bilingResult->info->administrativeArea,
-      "postalCode" => $bilingResult->info->postalCode,
-      "country" => $bilingResult->info->country,
       "email" => $bilingResult->info->email,
       "phoneNumber" => $bilingResult->info->phoneNumber,
       "card_number" => $bilingResult->info->card_number,

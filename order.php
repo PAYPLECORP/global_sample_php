@@ -5,10 +5,6 @@ $comments = "Payple global payments";
 $totalAmount = "1.00";
 $firstName = "Payple";
 $lastName = "Inc";
-$country = "KR";
-$address1 = "14, Teheran-ro 34-gil, Gangnam-gu";
-$locality = "Seoul";
-$postalCode = "06220";
 $currency = "USD";
 $email = "test@payple.kr";
 $phoneNumber = "01012345678";
@@ -232,65 +228,6 @@ $phoneNumber = "01012345678";
 						<div class="ctn__form_box">
 							<div class="input">
 								<input class="ipt" type="text" name="email" value="<?= $email ?>" />
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- 청구지 관련 파라미터 -->
-				<div class="tit--by-page">
-					<h3 class="tit_component">청구지 설정</h3>
-					<div class="icon">
-						<img src="/common/images/icon--arrow-up.svg" alt="" class="res" />
-					</div>
-				</div>
-				<div class="ctn--by-page">
-					<div class="form_box has_border w240 form-box-index">
-						<div class="tit__form_box">항목</div>
-						<div class="tit__form_box">요청변수</div>
-						<div class="ctn__form_box fsz_10">값</div>
-					</div>
-					<div class="form_box has_border w240">
-						<div class="tit__form_box fcl_txt fw_bd">국가</div>
-						<div class="tit__form_box fsz_08">country</div>
-						<div class="ctn__form_box">
-							<div class="input">
-								<input class="ipt" type="text" name="country" value="<?= $country ?>" />
-							</div>
-						</div>
-					</div>
-					<div class="form_box has_border w240">
-						<div class="tit__form_box fcl_txt fw_bd">도로명</div>
-						<div class="tit__form_box fsz_08">address1</div>
-						<div class="ctn__form_box">
-							<div class="input">
-								<input class="ipt" type="text" name="address1" value="<?= $address1 ?>" />
-							</div>
-						</div>
-					</div>
-					<div class="form_box has_border w240">
-						<div class="tit__form_box fcl_txt fw_bd">시/군/구</div>
-						<div class="tit__form_box fsz_08">locality</div>
-						<div class="ctn__form_box">
-							<div class="input">
-								<input class="ipt" type="text" name="locality" value="<?= $locality ?>" />
-							</div>
-						</div>
-					</div>
-					<div class="form_box has_border w240">
-						<div class="tit__form_box fcl_txt fw_bd">도/시</div>
-						<div class="tit__form_box fsz_08">administrativeArea</div>
-						<div class="ctn__form_box">
-							<div class="input">
-								<input class="ipt" type="text" name="administrativeArea" value="" placeholder="미국, 캐나다 도시코드 : 예) NY" />
-							</div>
-						</div>
-					</div>
-					<div class="form_box has_border w240">
-						<div class="tit__form_box fcl_txt fw_bd">우편번호</div>
-						<div class="tit__form_box fsz_08">postalCode</div>
-						<div class="ctn__form_box">
-							<div class="input">
-								<input class="ipt" type="text" name="postalCode" value="<?= $postalCode ?>" />
 							</div>
 						</div>
 					</div>
