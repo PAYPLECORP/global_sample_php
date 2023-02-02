@@ -7,7 +7,6 @@ $firstName = "Payple";
 $lastName = "Inc";
 $currency = "USD";
 $email = "test@payple.kr";
-$phoneNumber = "01012345678";
 
 ?>
 
@@ -82,7 +81,7 @@ $phoneNumber = "01012345678";
 <body>
 	<div class="device__layout w-600">
 		<div class="line_setter">
-			<form id="orderForm" name="orderForm" method="post" action="/node/order_confirm">
+			<form id="orderForm" name="orderForm" method="post" action="/order_confirm.php">
 				<h4 class="tit__device">
 					<img class="logo_in_text__md" src="/common/images/logo_full.svg" alt="" />
 					<b>해외결제 API</b>
@@ -210,15 +209,6 @@ $phoneNumber = "01012345678";
 						<div class="ctn__form_box">
 							<div class="input">
 								<input class="ipt" type="text" name="firstName" value="<?= $firstName ?>" />
-							</div>
-						</div>
-					</div>
-					<div class="form_box has_border w240">
-						<div class="tit__form_box fcl_txt fw_bd">결제고객<br />휴대전화번호</div>
-						<div class="tit__form_box fsz_08">phoneNumber</div>
-						<div class="ctn__form_box">
-							<div class="input">
-								<input class="ipt" type="text" name="phoneNumber" value="<?= $phoneNumber ?>" />
 							</div>
 						</div>
 					</div>

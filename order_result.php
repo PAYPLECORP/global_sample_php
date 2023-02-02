@@ -17,7 +17,6 @@ $currency = (isset($_POST['currency'])) ? $_POST['currency'] : "";
 $firstName = (isset($_POST['firstName'])) ? $_POST['firstName'] : "";
 $lastName = (isset($_POST['lastName'])) ? $_POST['lastName'] : "";
 $email = (isset($_POST['email'])) ? $_POST['email'] : "";
-$phoneNumber = (isset($_POST['phoneNumber'])) ? $_POST['phoneNumber'] : "";
 $billing_key = (isset($_POST['billing_key'])) ? $_POST['billing_key'] : "";
 $submitTimeUtc = (isset($_POST['submitTimeUtc'])) ? $_POST['submitTimeUtc'] : "";
 
@@ -200,10 +199,6 @@ $submitTimeUtc = (isset($_POST['submitTimeUtc'])) ? $_POST['submitTimeUtc'] : ""
 						<tr>
 							<td>email</td>
 							<td><?= $email ?></td>
-						</tr>
-						<tr>
-							<td>phoneNumber</td>
-							<td><?= $phoneNumber ?></td>
 						</tr>
 						<tr>
 							<td>billing_key</td>

@@ -11,8 +11,7 @@ $currency = isset($_POST['currency']) ? $_POST['currency'] : "";
 $firstName = isset($_POST['firstName']) ? $_POST['firstName'] : "";
 $lastName = isset($_POST['lastName']) ? $_POST['lastName'] : "";
 $email = isset($_POST['email']) ? $_POST['email'] : "";
-$phoneNumber = isset($_POST['phoneNumber']) ? $_POST['phoneNumber'] : "";
-$resultUrl = "http://". $SERVER_NAME . "/order_result.php"; 
+$resultUrl = "http://". $SERVER_NAME . "/order_result.php";
 
 ?>
 
@@ -43,7 +42,6 @@ $resultUrl = "http://". $SERVER_NAME . "/order_result.php";
     const firstName = "<?= $firstName ?>";                      // [선택] 카드소유주 이름 (보내지 않을 경우, 최초 결제시 입력한 카드소유주 이름으로 결제요청이 됩니다.)
     const lastName = "<?= $lastName ?>";                        // [선택] 카드소유주 성 (보내지 않을 경우, 최초 결제시 입력한 카드소유주 성으로 결제요청이 됩니다.)
     const email = "<?= $email ?>";                              // [선택] 이메일 주소  (보내지 않을 경우, 최초 결제시 입력한 이메일 주소로 결제요청이 됩니다.)
-    const phoneNumber = "<?= $phoneNumber ?>";                  // [선택] 휴대전화 번호  (보내지 않을 경우, 최초 결제시 입력한 휴대전화 번호로 결제요청이 됩니다.)
     const resultUrl = "<?= $resultUrl ?>";                      // [선택] 해당 파라미터(resultUrl)는 별도의 기능은 하지 않으나, 파트너사에서 빌링키 결제 성공시 리다이렉트 하는 등 활용할 수 있는 파라미터입니다.
     let api_id = "";
 
@@ -64,7 +62,6 @@ $resultUrl = "http://". $SERVER_NAME . "/order_result.php";
         formData.append('firstName', firstName);
         formData.append('lastName', lastName);
         formData.append('email', email);
-        formData.append('phoneNumber', phoneNumber);
         formData.append('resultUrl', resultUrl);
 
         $.ajax({

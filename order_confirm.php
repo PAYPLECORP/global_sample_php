@@ -10,7 +10,6 @@ try {
 	$lastName = isset($_POST['lastName']) ? $_POST['lastName'] : "";
 	$currency = isset($_POST['currency']) ? $_POST['currency'] : "";
 	$email = isset($_POST['email']) ? $_POST['email'] : "";
-	$phoneNumber = isset($_POST['phoneNumber']) ? $_POST['phoneNumber'] : "";
 	$isDirect = isset($_POST['isDirect']) ? trim($_POST['isDirect']) : "N";
 	/**
 	 * [필수] 결제결과 반환(Return) URL
@@ -117,7 +116,6 @@ try {
 			obj.firstName = "<?= $firstName ?>"; 										// [선택] 카드소유주 이름
 			obj.lastName = "<?= $lastName ?>"; 											// [선택] 카드소유주 성
 			obj.email = "<?= $email ?>"; 														// [선택] 이메일 주소
-			obj.phoneNumber = "<?= $phoneNumber ?>"; 								// [선택] 휴대전화 번호
 			/**
 			 * [필수] 결제결과 반환(Return) URL
 			 * - 결제완료 후 결제결과 파라미터와 함께 리다이렉트 되는 URL 로, 
@@ -180,10 +178,6 @@ try {
 						<td><?= $lastName ?> <?= $firstName ?></td>
 					</tr>
 					<tr>
-						<td>결제고객 휴대전화번호</td>
-						<td><?= $phoneNumber ?></td>
-					</tr>
-					<tr>
 						<td>결제고객 이메일</td>
 						<td><?= $email ?></td>
 					</tr>
@@ -193,13 +187,13 @@ try {
 					</tr>
 					<tr>
 						<td>결제금액</td>
-						<td><? $currency ?> <? $totalAmount ?></td>
+						<td><?= $currency ?> <?= $totalAmount ?></td>
 					</tr>
 				</table>
 			</div>
 			<div class="btn_box has_space align_center">
 				<div>
-					결제창 호출방식 : <? $isDirect ?>
+					결제창 호출방식 : <?= $isDirect ?>
 				</div>
 				<button class="btn cl_main btn_rounded btn_md" type="button" id="gpayOrderFormSubmit">해외결제하기</button>
 			</div>
